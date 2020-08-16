@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Virtual Dom Experiment</title>
+  </head>
+  <body>
+    <div id="app">
+      <div id="header"></div>
+      <div id="content">
+        {{message}}
+        <div id="content-inner"></div>
+        <span>testing</span>
+      </div>
+    </div>
+  </body>
+  <script src="/vDom/index.js"></script>
+  <script>
+    var app = new VDom({
+      el: "app",
+      data: {
+        message: "Hello Vue!",
+      },
+    });
+  </script>
+</html>
